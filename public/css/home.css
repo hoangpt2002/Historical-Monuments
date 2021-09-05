@@ -20,7 +20,7 @@
 
 .slider .slide.active{
     clip-path: circle(150% at 0 50%);
-    transition: 1.5s;
+    transition: 2s;
 }
 
 .slider .slide img{
@@ -85,13 +85,13 @@
 }
 
 .navigation-visibility{
-    z-index: 999;
+    z-index: 98;
     display: flex;
     justify-content: center;
 }
 
 .navigation-visibility .slide-icon{
-    z-index: 999;
+    z-index: 98;
     background: rgba(255, 255, 255, 0.5);
     width: 20px;
     height: 10px;
@@ -103,4 +103,11 @@
 
 .navigation-visibility .slide-icon.active{
     background: #4285F4;
+}
+
+@media (max-width: 768px) {
+    .slider,
+    .navigation {
+        height: 80vh;
+    } 
 }
