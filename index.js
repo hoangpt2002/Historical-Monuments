@@ -16,8 +16,17 @@ app.get("/home",function (req,res) {
 app.get("/historical",function (req,res) {
     res.render("historical");
 })
+app.get("/historical/geographical/:id", function (req,res) {
+    res.render("geographical-news");
+})
 app.get("/historical/geographical", function (req,res) {
     res.render("geographical");
+})
+app.get("/historical/time/:id", function (req,res) {
+    res.render("time-news");
+})
+app.get("/historical/time", function (req,res) {
+    res.render("time");
 })
 app.get("/gallery", function (req,res) {
     res.render("gallery");

@@ -1,0 +1,33 @@
+/* side-news {  */
+.side-news {
+    margin-top: 26px;
+}
+
+.sub-category {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.content-side-news {
+    margin-left: 20px;
+}
+
+.content-side-news a {
+    text-decoration: none;
+}
+
+.content-side-news h5 {
+    width: 330px;
+    font-size: 18px;
+}
+
+.image-side-news img {
+    width: 400px;
+    height: 250px;
+    border-radius: 2px;
+}
+
+.far.fa-angle-right {
+    margin-top: 10px;
+}
+/* end side-news } */

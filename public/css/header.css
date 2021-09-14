@@ -51,15 +51,22 @@ header {
 }
 
 
-.top-bar__menu-item li a {
+.top-bar__menu-item li a,
+.top-bar__menu-item li p {
     color: rgb(221, 221, 221);
     text-decoration: none;
     display: block;
     padding: 17px;
 }
 
+.top-bar__menu-item li p {
+    margin: 0;
+    cursor: pointer;
+}
+
 .top-bar__menu-item li a:hover,
-.historical-list li a:hover {
+.historical-list li a:hover,
+.top-bar__menu-item li p:hover {
     color: rgba(218, 171, 171, 0.6);
     text-shadow: 1px 1px 1px rgba(219, 212, 212, 0.5);
 }
@@ -99,7 +106,9 @@ header {
 .menu__item-historical:hover .historical-list__mobile {
     display: block;
 }
-
+.menu__item-historical p {
+    margin: 0;
+}
 .historical-list li {
     margin: 0;
 }
@@ -204,6 +213,11 @@ header {
     padding: 5px;
     margin: 5px;
     font-size: 35px;
+}
+
+a.dis{
+pointer-events: none;
+/* cursor: default; */
 }
 
 @media (max-width: 768px) {
