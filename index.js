@@ -13,9 +13,18 @@ app.get("/",function (req,res) {
 app.get("/home",function (req,res) {
     res.render("home")
 })
-app.get("/historical",function (req,res) {
-    res.render("historical");
+app.get("/contact",function (req,res) {
+    res.render("contact");
+})
+app.get("/gallery",function (req,res) {
+    res.render("gallery");
+})
+app.get("/historical/geographical/:id", function (req,res) {
+    res.render("geographical-news");
 })
 app.get("/historical/geographical", function (req,res) {
     res.render("geographical");
+})
+app.get("/historical/news", function (req,res) {
+    res.render("news");
 })
