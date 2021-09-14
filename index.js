@@ -19,7 +19,3 @@ app.get("/historical",function (req,res) {
 app.get("/historical/geographical", function (req,res) {
     res.render("geographical");
 })
-
-app.get("/historical/news", function (req,res) {
-    res.render("news");
-})
