@@ -33,13 +33,13 @@
 .slider .slide .info{
     position: absolute;
     color: #222;
-    background: rgba(255, 255, 255, 0.3);
-    width: 80%;
-    margin-top: 50px;
-    margin-left: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    width: 35%;
+    margin-top: 30px;
+    margin-left: 60px;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
 }
 
 .slider .slide .info h2{
@@ -136,11 +136,13 @@
 .customs .historical-monument__link:hover,
 .gallery-content .gallery__link:hover {
     color: #6351ce;
-    text-shadow: 1px 1px 1px #5142a8;
+    text-shadow: 1px 1px 1px #5643bd;
 }
 
 .imgover img {
     width: 100%;
+    height: 240px;
+    object-fit: cover;
 }
 
 .imgover-list {
@@ -199,6 +201,18 @@
     line-height: normal;
     font-weight: normal;
     margin-left: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.posts-content .heading {
+    -webkit-line-clamp: 1;
+}
+.posts-content > p {
+    -webkit-line-clamp: 3;
 }
 
 .posts-content .heading {
@@ -213,11 +227,11 @@
 .historical-monument__content footer .btn {
     text-decoration: none;
     color: #FFFFFF;
-    background-color: #6351ce;
+    background-color: #5c4bbb;
     display: inline-block;
     padding: 8px 18px 10px;
     text-transform: uppercase;
-    border: 1px solid #5843d1;
+    border: 1px solid #5c4bbb;
     border-radius: 0px;
     transition: all .3s ease-in;
 }
@@ -262,15 +276,15 @@
     color: #fff;
     display: inline-block;
     padding-left: 20px;
-    line-height: 15px;
+    line-height: 20px;
     transform: translateY(25px);
     transition: .5s ease-in-out;
     letter-spacing: 0.5px;
-    }
-
-.full-screen-portfolio .portfolio-item em {
-    font-style: normal;
-    font-weight: 200;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
 }
 
 .full-screen-portfolio .portfolio-item:hover h1 {
@@ -287,6 +301,12 @@
     transform: translateY(10px);
     transition: .5s ease-in-out;
     text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
 }
 
 .full-screen-portfolio .portfolio-item {
@@ -351,7 +371,11 @@
     margin: 0 auto;
     float: none; 
     display: table; 
-    color: #4ad1e5; 
+    color: #6351ce; 
+}
+
+.col.col-12.col-xl-4.col-md-6.col-sm-12 {
+    height: 55vh;
 }
 
 /* Responsive */
@@ -363,5 +387,9 @@
     
     .counter {
         width: 50%;
+    }
+
+    .slider .slide .info {
+        display: none;
     }
 }

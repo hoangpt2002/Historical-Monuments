@@ -11,143 +11,23 @@
     <div class="full-screen-portfolio" id="portfolio">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/7-wonders-of-the-world-1.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>Biodiesel <em>squid</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/7-wonders-of-the-world-1.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/7-wonders-of-the-world-2.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>raclette <em>taxidermy</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/7-wonders-of-the-world-2.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/7-wonders-of-the-world-3.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>humblebrag <em>brunch</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/7-wonders-of-the-world-3.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/7-wonders-of-the-world-4.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>Succulents <em>chambray</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/7-wonders-of-the-world-4.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/7-wonders-of-the-world-5.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>freegan <em>aesthetic</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/7-wonders-of-the-world-5.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/7-wonders-of-the-world-6.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>taiyaki <em>vegan</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/7-wonders-of-the-world-6.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/7-wonders-of-the-world-7.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>Thundercats <em>santo</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/7-wonders-of-the-world-7.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/7-wonders-of-the-world-1.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>wayfarers <em>yuccie</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/7-wonders-of-the-world-1.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/7-wonders-of-the-world-2.jpg" data-lightbox="image-1">
-                            <div class="thumb">
+                <% for (let i = 0; i < 21; i++) {%>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <a href="<%= data[i].HinhAnh %>" data-lightbox="image-1"><div class="thumb">
                                 <div class="hover-effect">
                                     <div class="hover-content">
-                                        <h1>disrupt <em>street</em></h1>
-                                        <p>Awesome Subtittle Goes Here</p>
+                                        <h1><%= data[i].TieuDe %></h1>
+                                        <p><%= data[i].NoiDung %> </p>
                                     </div>
                                 </div>
                                 <div class="image">
-                                    <img src="images/7-wonders-of-the-world-2.jpg">
+                                    <img src="<%= data[i].HinhAnh %>">
                                 </div>
-                            </div>
-                        </a>
+                            </div></a>
+                        </div>
                     </div>
-                </div>
+                <% } %> 
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include("layout/head") %>
-    <title>Geographical News</title>
+    <title>Customs News</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/geographical-news.css" type="text/css">
 </head>
@@ -48,19 +48,19 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <% for (let i = 0; i < 9; i++) { %>
-                                <div class="col-md-4">
-                                    <div class="sub-category">
-                                        <div class="image-side-news">
-                                            <a href="<%= data[i].Slug %>"><img src="<%= data[i].HinhAnh %>" alt=""></a>
-                                        </div>
-                                        <div class="content-side-news">
-                                            <p style="color: #6351ce;">News</p>
-                                            <h5><a href="<%= data[i].Slug %>"><%= data[i].TieuDe %></a></h5>
-                                            <p><a href="<%= data[i].Slug %>">see more <i class="fas fa-arrow-circle-right"></i></a></p>
+                                    <div class="col-md-4">
+                                        <div class="sub-category">
+                                            <div class="image-side-news">
+                                                <a href="<%= data[i].Slug %>"><img src="<%= data[i].HinhAnh %>" alt=""></a>
+                                            </div>
+                                            <div class="content-side-news">
+                                                <p style="color: #6351ce;">News</p>
+                                                <h5><a href="<%= data[i].Slug %>"><%= data[i].TieuDe %></a></h5>
+                                                <p><a href="<%= data[i].Slug %>">see more <i class="fas fa-arrow-circle-right"></i></a></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <% } %> 
+                                    <% } %> 
                             </div>
                         </div>
                     </div>
@@ -69,8 +69,5 @@
         </div>
     </div>
     <%- include("layout/footer") %> 
-    <script>
-        
-    </script>
 </body>
 </html>

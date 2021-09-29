@@ -3,102 +3,82 @@
 <head>
     <%- include("layout/head") %> 
     <title>Geographical</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/geographical.css">
 </head>
 <body>
     <%- include("layout/header") %> 
-    <!-- side-news !-->
-    <div class="side-news">
-        <div class="container">
-            <div class="row">
-                <div class="sub-category">
-                    <div class="image-side-news">
-                        <img src="https://image.thanhnien.vn/1024/uploaded/trandong/2015_10_27/kimtuthapd_zrfu.jpg" alt="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="news">
+                    <div class="full-news">
+                        <div class="row">
+                            <div class="col-md-6 pr-0">
+                                <div class="main-news">
+                                    <div class="image-main-news">
+                                        <img src="https://cacnuoc.vn/wp-content/uploads/2019/08/tuong-christ-the-redeemer-brazil-1024x768.jpeg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pl-0">
+                                <div class="side-news">
+                                    <div class="trending-post">
+                                        <b>TRENDING POSTS</b>
+                                    </div>
+                                    <% for (let i = 0; i < 3; i++) { %> 
+                                    <div class="sub-category">
+                                        <div class="image-side-news">
+                                            <a href="<%= data[i].Slug %>"><img src="<%= data[i].HinhAnh %>"alt=""></a>
+                                        </div>
+                                        <div class="content-side-news">
+                                            <p style="color: #6351ce;">News</p>
+                                            <h5><a href="<%= data[i].Slug %>"><%= data[i].TieuDe %></a></h5>
+                                            <p><a href="<%= data[i].Slug %>">see more <i class="fas fa-arrow-circle-right"></i></a></p>
+                                        </div>
+                                    </div>
+                                    <% } %> 
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content-side-news">
-                        <a href="/historical/geographical/:1">
-                            <p style="color: red">News</p>
-                            <h5>The Great Pyramid of Giza, also known as the Pyramid of Khufu or the Pyramid of Cheops, is the oldest and largest pyramid located in the Giza pyramid complex of Egypt.</h5>
-                            <p>see more <i class="far fa-angle-right"></i></p>
-                        </a>
-                    </div>
-                </div>
-                <div class="sub-category">
-                    <div class="image-side-news">
-                        <img src="https://image.thanhnien.vn/1024/uploaded/trandong/2015_10_27/kimtuthapd_zrfu.jpg" alt="">
-                    </div>
-                    <div class="content-side-news">
-                        <a href="/historical/geographical/:1">
-                            <p style="color: red">News</p>
-                            <h5>The Great Pyramid of Giza, also known as the Pyramid of Khufu or the Pyramid of Cheops, is the oldest and largest pyramid located in the Giza pyramid complex of Egypt.</h5>
-                            <p>see more <i class="far fa-angle-right"></i></p>
-                        </a>
-                    </div>
-                </div>
-                <div class="sub-category">
-                    <div class="image-side-news">
-                        <img src="https://image.thanhnien.vn/1024/uploaded/trandong/2015_10_27/kimtuthapd_zrfu.jpg" alt="">
-                    </div>
-                    <div class="content-side-news">
-                        <a href="/historical/geographical/:1">
-                            <p style="color: red">News</p>
-                            <h5>The Great Pyramid of Giza, also known as the Pyramid of Khufu or the Pyramid of Cheops, is the oldest and largest pyramid located in the Giza pyramid complex of Egypt.</h5>
-                            <p>see more <i class="far fa-angle-right"></i></p>
-                        </a>
-                    </div>
-                </div>
-                <div class="sub-category">
-                    <div class="image-side-news">
-                        <img src="https://image.thanhnien.vn/1024/uploaded/trandong/2015_10_27/kimtuthapd_zrfu.jpg" alt="">
-                    </div>
-                    <div class="content-side-news">
-                        <a href="/historical/geographical/:1">
-                            <p style="color: red">News</p>
-                            <h5>The Great Pyramid of Giza, also known as the Pyramid of Khufu or the Pyramid of Cheops, is the oldest and largest pyramid located in the Giza pyramid complex of Egypt.</h5>
-                            <p>see more <i class="far fa-angle-right"></i></p>
-                        </a>
-                    </div>
-                </div>
-                <div class="sub-category">
-                    <div class="image-side-news">
-                        <img src="https://image.thanhnien.vn/1024/uploaded/trandong/2015_10_27/kimtuthapd_zrfu.jpg" alt="">
-                    </div>
-                    <div class="content-side-news">
-                        <a href="/historical/geographical/:1">
-                            <p style="color: red">News</p>
-                            <h5>The Great Pyramid of Giza, also known as the Pyramid of Khufu or the Pyramid of Cheops, is the oldest and largest pyramid located in the Giza pyramid complex of Egypt.</h5>
-                            <p>see more <i class="far fa-angle-right"></i></p>
-                        </a>
-                    </div>
-                </div>
-                <div class="sub-category">
-                    <div class="image-side-news">
-                        <img src="https://image.thanhnien.vn/1024/uploaded/trandong/2015_10_27/kimtuthapd_zrfu.jpg" alt="">
-                    </div>
-                    <div class="content-side-news">
-                        <a href="/historical/geographical/:1">
-                            <p style="color: red">News</p>
-                            <h5>The Great Pyramid of Giza, also known as the Pyramid of Khufu or the Pyramid of Cheops, is the oldest and largest pyramid located in the Giza pyramid complex of Egypt.</h5>
-                            <p>see more <i class="far fa-angle-right"></i></p>
-                        </a>
-                    </div>
-                </div>
-                <div class="sub-category">
-                    <div class="image-side-news">
-                        <img src="https://image.thanhnien.vn/1024/uploaded/trandong/2015_10_27/kimtuthapd_zrfu.jpg" alt="">
-                    </div>
-                    <div class="content-side-news">
-                        <a href="/historical/geographical/:1">
-                            <p style="color: red">News</p>
-                            <h5>The Great Pyramid of Giza, also known as the Pyramid of Khufu or the Pyramid of Cheops, is the oldest and largest pyramid located in the Giza pyramid complex of Egypt.</h5>
-                            <p>see more <i class="far fa-angle-right"></i></p>
-                        </a>
+            
+                    <div class="col-md-12">
+                        <div class="seperate-footer">
+                            <i class="fas fa-horizontal-rule"></i>
+                            <i class="fas fa-horizontal-rule"></i>
+                        </div>
+            
+                        <div class="trending-post-footer">
+                            <b>TRENDING POSTS</b>
+                        </div>
+                        <div class="side-news-footer">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <% for (let i = 0; i < 9; i++) { %>
+                                    <div class="col-md-4">
+                                        <div class="sub-category-footer">
+                                            <div class="image-side-news-footer">
+                                                <a href="<%= data[i].Slug %>">
+                                                    <img src="<%= data[i].HinhAnh %>" alt=""></>
+                                                </a>
+                                            </div>
+                                            <div class="content-side-news-footer">
+                                                <p style="color: #6351ce;">News</p>
+                                                <h5><a href="<%= data[i].Slug %>"><%= data[i].TieuDe %></a></h5>
+                                                <p><a href="<%= data[i].Slug %>">see more <i class="fas fa-arrow-circle-right"></i></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% } %> 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<!-- end side-news !-->
     <%- include("layout/footer") %> 
 </body>
 </html>

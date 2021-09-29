@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("layout/head") %> 
+    <title>Customs</title>
+    <link rel="stylesheet" href="css/time.css">
+</head>
+<body>
+    <%- include("layout/header") %> 
+    <div class="news">
+            <!-- full-news !-->
+            <div class="full-news">
+
+                <!-- main-news !-->
+                    <div class="main-news">
+                        <div class="image-main-news">
+                            <img src="http://dulichvietnam.com.vn/data/21-buc-anh-ngoan-muc-7-ky-quan-the-gioi-moi-4.jpg">
+                        </div>
+                    </div>
+                <!-- end main-new !-->
+
+                <!-- side-news -->
+                    <div class="side-news">
+                        <div class="trending-post">
+                            <b>TRENDING POSTS</b>
+                        </div>
+                        <% for (let i = 0; i < 3; i++) { %> 
+                            <div class="sub-category">
+                                <div class="image-side-news">
+                                    <a href="<%= data[i].Slug %>"><img src="<%= data[i].HinhAnh %>"alt=""></a>
+                                </div>
+                                <div class="content-side-news">
+                                    <p style="color: #6351ce;">News</p>
+                                    <h5><a href="<%= data[i].Slug %>"><%= data[i].TieuDe %></a></h5>
+                                    <p><a href="<%= data[i].Slug %>">see more <i class="fas fa-arrow-circle-right"></i></a></p>
+                                </div>
+                            </div>
+                            <% } %> 
+                    </div>
+                <!-- end side-news !-->
+            </div>
+        <!-- end full-news !-->
+
+
+        <footer>
+            <!-- side-news !-->
+            <div class="trending-post-footer">
+                <b>TRENDING POSTS</b>
+                <p>Recommend Current Hot News</p>
+            </div>
+            <div class="side-news-footer">
+                <div class="row">
+                    <% for (let i = 0; i < 9; i++) { %>
+                        <div class="col-md-4">
+                            <div class="sub-category-footer">
+                                <div class="image-side-news-footer">
+                                    <a href="<%= data[i].Slug %>">
+                                        <img src="<%= data[i].HinhAnh %>" alt=""></>
+                                    </a>
+                                </div>
+                                <div class="content-side-news-footer">
+                                    <p style="color: #6351ce;">News</p>
+                                    <h5><a href="<%= data[i].Slug %>"><%= data[i].TieuDe %></a></h5>
+                                    <p><a href="<%= data[i].Slug %>">see more <i class="fas fa-arrow-circle-right"></i></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %> 
+                </div>
+            </div>
+        </footer>
+    </div>
+    <%- include("layout/footer") %> 
+</body>
+</html>

@@ -14,54 +14,21 @@
                     <div class="col d-flex justify-content-center align-item-center">
                         <div class="slider">
                                 <div class="slide active">
-                                    <img src="images/7-wonders-of-the-world-1.jpg" alt="">
+                                    <img src="<%= data[0].HinhAnh %>" alt="">
                                     <div class="info">
-                                        <h2>Christ the Redeemer</h2>
-                                        <p>A very well known work of art in Brazil, Christ the Redeemer is an Art Deco statue of Jesus Christ. It was created by French sculptor Paul Landowski and built by Brazilian engineer Heitor da Silva Costa, in collaboration with French engineer Albert Caquot.</p>
+                                        <h2><%= data[0].TieuDe %></h2>
+                                        <p><%= data[0].NoiDung %> </p>
                                     </div>
                                 </div>
-                                <div class="slide">
-                                    <img src="images/7-wonders-of-the-world-2.jpg" alt="">
-                                    <div class="info">
-                                        <h2>Taj Mahal</h2>
-                                        <p>The Taj Mahal is known the world over for its beautiful architecture, history and the tale of love that led to its creation. Located in the Indian city of Agra, the Taj Mahal was commissioned in 1632 by the Mughal emperor Shah Jahan as a testament of his love for his departed wife Mumtaz Mahal.</p>
+                                <% for(let i = 1; i < 7; i++) { %>
+                                    <div class="slide">
+                                        <img src="<%= data[i].HinhAnh %>" alt="">
+                                        <div class="info">
+                                            <h2><%= data[i].TieuDe %></h2>
+                                            <p><%= data[i].NoiDung %> </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="slide">
-                                    <img src="images/7-wonders-of-the-world-3.jpg" alt="">
-                                    <div class="info">
-                                        <h2>Petra</h2>
-                                        <p>Originally known to its inhabitants as Raqmu, Petra is a historical and archaeological city in southern Jordan. It is believed that the area around Petra was inhabited as early as 7,000 BC, and the access to the city is through a 1.2-kilometre-long gorge called the Siq, which leads directly to the Khazneh.</p>
-                                    </div>
-                                </div>
-                                <div class="slide">
-                                    <img src="images/7-wonders-of-the-world-4.jpg" alt="">
-                                    <div class="info">
-                                        <h2>Machu Picchu</h2>
-                                        <p>Located in the Eastern Cordillera of southern Peru on a 7,970 ft mountain ridge, Machu Picchu is a 15th-century Inca citadel. It is the most familiar icon of Inca civilization, and is often mistaken for the ‘Lost City of the Incas’.</p>
-                                    </div>
-                                </div>
-                                <div class="slide">
-                                    <img src="images/7-wonders-of-the-world-5.jpg" alt="">
-                                    <div class="info">
-                                        <h2>Colosseum</h2>
-                                        <p>Also known as the Flavian Amphitheatre, the Colosseum is an oval-shaped amphitheater located in the centre of Rome in Italy. Built with concrete and sand, its construction began under Emperor Vespasian in AD 72 and it was completed by his successor, Titus, in AD 80.</p>
-                                    </div>
-                                </div>
-                                <div class="slide">
-                                    <img src="images/7-wonders-of-the-world-6.jpg" alt="">
-                                    <div class="info">
-                                        <h2>Great Wall of China</h2>
-                                        <p>Great might be an understatement. One of the world’s largest building-construction projects, the Great Wall of China is widely thought to be about 5,500 miles (8,850 km) long; a disputed Chinese study, however, claims the length is 13,170 miles (21,200 km).</p>
-                                    </div>
-                                </div>
-                                <div class="slide">
-                                    <img src="images/7-wonders-of-the-world-7.jpg" alt="">
-                                    <div class="info">
-                                        <h2>Chichen Itza</h2>
-                                        <p>Chichen Itza is an archaeological site located in Tinum Municipality of Yucatan State in Mexico. It was a large pre-Columbian city built by the Maya people, and was likely to have been one of the mythical great cities.</p>
-                                    </div>
-                                </div>
+                                <% } %> 
                             <div class="navigation">
                                 <i class="fas fa-chevron-left prev-btn"></i>
                                 <i class="fas fa-chevron-right next-btn"></i>
@@ -93,47 +60,21 @@
                     <div class="col-md-12">
                         <div class="historical-monument__content">
                             <div class="row">
+                                <% for(let i = 7; i < 13; i++) { %>
                                 <div class="col col-12 col-xl-4 col-md-6 col-sm-12">
                                     <article>
-                                        <a class="imgover" href="/historical/geographical/1"><img src="images/7-wonders-of-the-world-6.jpg"></a>
+                                        <a class="imgover" href="<%= data[i].Slug %>"><img src="<%= data[i].HinhAnh %>"></a>
                                         <br>
                                         <br>
                                         <div class="posts-content">
-                                            <h6 class="heading">Aliquet tincidunt vel vulputate egestas leo</h6>
-                                            <time><strong>05</strong> <em>APR</em></time>
-                                            <p>Integer id justo ut diam suscipit laoreet quisque bibendum dolor at ultricies vestibulum risus&hellip;</p>
+                                            <h6 class="heading"><%= data[i].TieuDe %></h6>
+                                            <time><strong><%= data[i].Ngay %></strong> <em><%= data[i].Thang %></em></time>
+                                            <p><%= data[i].NoiDung %></p>
                                         </div>
-                                        <footer><a class="btn" href="/historical/geographical/1">Read More</a></footer>
+                                        <footer><a class="btn" href="<%= data[i].Slug %>">Read More</a></footer>
                                     </article>
                                 </div>
-                                
-                                <div class="col col-12 col-xl-4 col-md-6 col-sm-12">
-                                    <article>
-                                        <a class="imgover" href="/historical/geographical/1"><img src="images/7-wonders-of-the-world-6.jpg"></a>
-                                        <br>
-                                        <br>
-                                        <div class="posts-content">
-                                            <h6 class="heading">Aliquet tincidunt vel vulputate egestas leo</h6>
-                                            <time><strong>05</strong> <em>APR</em></time>
-                                            <p>Integer id justo ut diam suscipit laoreet quisque bibendum dolor at ultricies vestibulum risus&hellip;</p>
-                                        </div>
-                                        <footer><a class="btn" href="/historical/geographical/1">Read More</a></footer>
-                                    </article>
-                                </div>
-
-                                <div class="col col-12 col-xl-4 col-md-6 col-sm-12">
-                                    <article>
-                                        <a class="imgover" href="/historical/geographical/1"><img src="images/7-wonders-of-the-world-6.jpg"></a>
-                                        <br>
-                                        <br>
-                                        <div class="posts-content">
-                                            <h6 class="heading">Aliquet tincidunt vel vulputate egestas leo</h6>
-                                            <time><strong>05</strong> <em>APR</em></time>
-                                            <p>Integer id justo ut diam suscipit laoreet quisque bibendum dolor at ultricies vestibulum risus&hellip;</p>
-                                        </div>
-                                        <footer><a class="btn" href="/historical/geographical/1">Read More</a></footer>
-                                    </article>
-                                </div>
+                                <% } %> 
                             </div>
                         </div>
                     </div>
@@ -150,47 +91,21 @@
                     <div class="col-md-12">
                         <div class="historical-monument__content">
                             <div class="row">
+                                <% for(let i = 16; i < 22; i++) { %>
                                 <div class="col col-12 col-xl-4 col-md-6 col-sm-12">
                                     <article>
-                                        <a class="imgover" href="/historical/time/1"><img src="images/7-wonders-of-the-world-6.jpg"></a>
+                                        <a class="imgover" href="<%= data[i].Slug %>"><img src="<%= data[i].HinhAnh %>"></a>
                                         <br>
                                         <br>
                                         <div class="posts-content">
-                                            <h6 class="heading">Aliquet tincidunt vel vulputate egestas leo</h6>
-                                            <time><strong>05</strong> <em>APR</em></time>
-                                            <p>Integer id justo ut diam suscipit laoreet quisque bibendum dolor at ultricies vestibulum risus&hellip;</p>
+                                            <h6 class="heading"><%= data[i].TieuDe %></h6>
+                                            <time><strong><%= data[i].Ngay %></strong> <em><%= data[i].Thang %></em></time>
+                                            <p><%= data[i].NoiDung %></p>
                                         </div>
-                                        <footer><a class="btn" href="/historical/time/1">Read More</a></footer>
+                                        <footer><a class="btn" href="<%= data[i].Slug %>">Read More</a></footer>
                                     </article>
                                 </div>
-                                
-                                <div class="col col-12 col-xl-4 col-md-6 col-sm-12">
-                                    <article>
-                                        <a class="imgover" href="/historical/time/1"><img src="images/7-wonders-of-the-world-6.jpg"></a>
-                                        <br>
-                                        <br>
-                                        <div class="posts-content">
-                                            <h6 class="heading">Aliquet tincidunt vel vulputate egestas leo</h6>
-                                            <time><strong>05</strong> <em>APR</em></time>
-                                            <p>Integer id justo ut diam suscipit laoreet quisque bibendum dolor at ultricies vestibulum risus&hellip;</p>
-                                        </div>
-                                        <footer><a class="btn" href="/historical/time/1">Read More</a></footer>
-                                    </article>
-                                </div>
-
-                                <div class="col col-12 col-xl-4 col-md-6 col-sm-12">
-                                    <article>
-                                        <a class="imgover" href="/historical/time/1"><img src="images/7-wonders-of-the-world-6.jpg"></a>
-                                        <br>
-                                        <br>
-                                        <div class="posts-content">
-                                            <h6 class="heading">Aliquet tincidunt vel vulputate egestas leo</h6>
-                                            <time><strong>05</strong> <em>APR</em></time>
-                                            <p>Integer id justo ut diam suscipit laoreet quisque bibendum dolor at ultricies vestibulum risus&hellip;</p>
-                                        </div>
-                                        <footer><a class="btn" href="/historical/time/1">Read More</a></footer>
-                                    </article>
-                                </div>
+                                <% } %> 
                             </div>
                         </div>
                     </div>
@@ -207,47 +122,21 @@
                     <div class="col-md-12">
                         <div class="historical-monument__content">
                             <div class="row">
-                                <div class="col col-12 col-xl-4 col-md-6 col-sm-12">
-                                    <article>
-                                        <a class="imgover" href="/historical/customs/1"><img src="images/7-wonders-of-the-world-6.jpg"></a>
-                                        <br>
-                                        <br>
-                                        <div class="posts-content">
-                                            <h6 class="heading">Aliquet tincidunt vel vulputate egestas leo</h6>
-                                            <time><strong>05</strong> <em>APR</em></time>
-                                            <p>Integer id justo ut diam suscipit laoreet quisque bibendum dolor at ultricies vestibulum risus&hellip;</p>
-                                        </div>
-                                        <footer><a class="btn" href="/historical/customs/1">Read More</a></footer>
-                                    </article>
-                                </div>
-                                
-                                <div class="col col-12 col-xl-4 col-md-6 col-sm-12">
-                                    <article>
-                                        <a class="imgover" href="/historical/customs/1"><img src="images/7-wonders-of-the-world-6.jpg"></a>
-                                        <br>
-                                        <br>
-                                        <div class="posts-content">
-                                            <h6 class="heading">Aliquet tincidunt vel vulputate egestas leo</h6>
-                                            <time><strong>05</strong> <em>APR</em></time>
-                                            <p>Integer id justo ut diam suscipit laoreet quisque bibendum dolor at ultricies vestibulum risus&hellip;</p>
-                                        </div>
-                                        <footer><a class="btn" href="/historical/customs/1">Read More</a></footer>
-                                    </article>
-                                </div>
-
-                                <div class="col col-12 col-xl-4 col-md-6 col-sm-12">
-                                    <article>
-                                        <a class="imgover" href="/historical/customs/1"><img src="images/7-wonders-of-the-world-6.jpg"></a>
-                                        <br>
-                                        <br>
-                                        <div class="posts-content">
-                                            <h6 class="heading">Aliquet tincidunt vel vulputate egestas leo</h6>
-                                            <time><strong>05</strong> <em>APR</em></time>
-                                            <p>Integer id justo ut diam suscipit laoreet quisque bibendum dolor at ultricies vestibulum risus&hellip;</p>
-                                        </div>
-                                        <footer><a class="btn" href="/historical/customs/1">Read More</a></footer>
-                                    </article>
-                                </div>
+                                <% for(let i = 25; i < 31; i++) { %>
+                                    <div class="col col-12 col-xl-4 col-md-6 col-sm-12">
+                                        <article>
+                                            <a class="imgover" href="<%= data[i].Slug %>"><img src="<%= data[i].HinhAnh %>"></a>
+                                            <br>
+                                            <br>
+                                            <div class="posts-content">
+                                                <h6 class="heading"><%= data[i].TieuDe %></h6>
+                                                <time><strong><%= data[i].Ngay %></strong> <em><%= data[i].Thang %></em></time>
+                                                <p><%= data[i].NoiDung %></p>
+                                            </div>
+                                            <footer><a class="btn" href="<%= data[i].Slug %>">Read More</a></footer>
+                                        </article>
+                                    </div>
+                                    <% } %> 
                             </div>
                         </div>
                     </div>
@@ -266,141 +155,23 @@
                     <div class="full-screen-portfolio" id="portfolio">
                         <div class="container-fluid">
                             <div class="row">
+                                <% for(let i = 0; i < 9; i++) { %>
                                 <div class="col-md-4 col-sm-6">
                                     <div class="portfolio-item">
                                         <div class="thumb">
                                             <div class="hover-effect">
                                                 <div class="hover-content">
-                                                    <h1>Biodiesel <em>squid</em></h1>
-                                                    <p>Awesome Subtittle Goes Here</p>
+                                                    <h1><%= data[i].TieuDe %></h1>
+                                                    <p><%= data[i].NoiDung %></p>
                                                 </div>
                                             </div>
                                             <div class="image">
-                                                <img src="images/7-wonders-of-the-world-1.jpg">
+                                                <img src="<%= data[i].HinhAnh %>">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="portfolio-item">
-                                        <div class="thumb">
-                                            <div class="hover-effect">
-                                                <div class="hover-content">
-                                                    <h1>raclette <em>taxidermy</em></h1>
-                                                    <p>Awesome Subtittle Goes Here</p>
-                                                </div>
-                                            </div>
-                                            <div class="image">
-                                                <img src="images/7-wonders-of-the-world-2.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="portfolio-item">
-                                        <div class="thumb">
-                                            <div class="hover-effect">
-                                                <div class="hover-content">
-                                                    <h1>humblebrag <em>brunch</em></h1>
-                                                    <p>Awesome Subtittle Goes Here</p>
-                                                </div>
-                                            </div>
-                                            <div class="image">
-                                                <img src="images/7-wonders-of-the-world-3.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="portfolio-item">
-                                        <div class="thumb">
-                                            <div class="hover-effect">
-                                                <div class="hover-content">
-                                                    <h1>Succulents <em>chambray</em></h1>
-                                                    <p>Awesome Subtittle Goes Here</p>
-                                                </div>
-                                            </div>
-                                            <div class="image">
-                                                <img src="images/7-wonders-of-the-world-4.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="portfolio-item">
-                                        <div class="thumb">
-                                            <div class="hover-effect">
-                                                <div class="hover-content">
-                                                    <h1>freegan <em>aesthetic</em></h1>
-                                                    <p>Awesome Subtittle Goes Here</p>
-                                                </div>
-                                            </div>
-                                            <div class="image">
-                                                <img src="images/7-wonders-of-the-world-5.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="portfolio-item">
-                                        <div class="thumb">
-                                            <div class="hover-effect">
-                                                <div class="hover-content">
-                                                    <h1>taiyaki <em>vegan</em></h1>
-                                                    <p>Awesome Subtittle Goes Here</p>
-                                                </div>
-                                            </div>
-                                            <div class="image">
-                                                <img src="images/7-wonders-of-the-world-6.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="portfolio-item">
-                                        <div class="thumb">
-                                            <div class="hover-effect">
-                                                <div class="hover-content">
-                                                    <h1>Thundercats <em>santo</em></h1>
-                                                    <p>Awesome Subtittle Goes Here</p>
-                                                </div>
-                                            </div>
-                                            <div class="image">
-                                                <img src="images/7-wonders-of-the-world-7.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="portfolio-item">
-                                        <div class="thumb">
-                                            <div class="hover-effect">
-                                                <div class="hover-content">
-                                                    <h1>wayfarers <em>yuccie</em></h1>
-                                                    <p>Awesome Subtittle Goes Here</p>
-                                                </div>
-                                            </div>
-                                            <div class="image">
-                                                <img src="images/7-wonders-of-the-world-1.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="portfolio-item">
-                                        <div class="thumb">
-                                            <div class="hover-effect">
-                                                <div class="hover-content">
-                                                    <h1>disrupt <em>street</em></h1>
-                                                    <p>Awesome Subtittle Goes Here</p>
-                                                </div>
-                                            </div>
-                                            <div class="image">
-                                                <img src="images/7-wonders-of-the-world-2.jpg">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <% } %> 
                             </div>
                         </div>
                     </div>
